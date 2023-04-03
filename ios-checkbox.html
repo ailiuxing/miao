@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .iso-checkbox{
+      width: 250px;
+      height: 156px;
+      background-color: lawngreen;
+      border: 3px solid #cbc7ca;
+      border-radius: 100px;
+      padding: 7px;
+      box-sizing: border-box;
+      position: relative;
+      transition: 1s;
+    }
+    .cover{
+      width: 245px;
+      height: 151px;
+      border-radius: 78px;
+      background-color: #fff;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.5s;
+      transition-timing-function: cubic-bezier(.87,0,.5,.99);
+    }
+    .button{
+      width: 136px;
+      height: 136px;
+      border-radius: 68px;
+      background-color: #fff;
+      box-shadow: 3px 3px 7px #dbdbdb,3px 3px 7px #dbdbdb,3px 3px 7px #dbdbdb;
+      box-sizing: border-box;
+      position: absolute;
+      left: 10px;
+      z-index: 99;
+      transition: 0.5s;
+      transition-timing-function: cubic-bezier(.77,0,.24,.99);
+    }
+    .iso-checkbox:hover{
+      
+      border-color: lawngreen;
+    }
+    .iso-checkbox:hover .cover{
+     transform: scale(0,0);
+    }
+    .iso-checkbox:hover .button{
+      left: 105px;
+    }
+  </style>
+</head>
+<body>
+  <div class="iso-checkbox">
+    <div class="cover"></div>
+    <div class="button"></div>
+  </div>
+</body>
+</html>
