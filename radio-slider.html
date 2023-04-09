@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  . label:hover{
+    background-color: thistle;
+    cursor: pointer;
+  }
+  .radio input{
+    display: none;
+  }
+  .img{
+    height: 200px;
+  }
+  .img img {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    height: 200px;
+  }
+  input.kk-1:checked ~.img img#i-1,input.kk-2:checked ~.img img#i-2,input.kk-3:checked ~.img img#i-3,input.kk-4:checked ~.img img#i-4{
+    opacity: 1;
+  }
+  .kk label{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    border: 2px solid #020202;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="radio">
+    <input type="radio" name="kk" class="kk-1" id="kk-1" checked>
+    <input type="radio" name="kk" class="kk-2" id="kk-2">
+    <input type="radio" name="kk" class="kk-3" id="kk-3">
+    <input type="radio" name="kk" class="kk-4" id="kk-4">
+    <div class="img">
+      <img id="i-1"src="https://i02.appmifile.com/479_operator_us/02/02/2023/c61b42c7e3d6710e6425b358fee2d8e1.png?f=webp" alt="">
+      <img id="i-2"src="https://i02.appmifile.com/370_operator_us/02/02/2023/3195bc3ad0f917dc7c7226141b4a1def.jpg?f=webp" alt="">
+      <img id="i-3"src="https://i02.appmifile.com/754_operator_us/03/02/2023/de6e78a5864fb73359c35b9481d6181b.jpg?f=webp" alt="">
+      <img id="i-4"src="https://i02.appmifile.com/826_operator_us/03/02/2023/10e07a7bad358284fcd0e7ee60ed770f.png?f=webp" alt="">
+    </div>
+  </div>
+  <div class="kk">
+    <label for="kk-1"></label>
+    <label for="kk-2"></label>
+    <label for="kk-3"></label>
+    <label for="kk-4"></label>
+  </div>
+
+
+
+</body>
+</html>
