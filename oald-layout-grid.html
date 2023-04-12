@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+    }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    .aa {
+      width: 100%;
+      height: 100%;
+      min-width: 800px;
+
+      display: grid;
+      grid-template-columns: 200px auto 200px 200px;
+    }
+    h3 {
+      padding-left: 10px;
+    }
+    .aside {
+      text-align: center;
+      border-right: 1px black solid;
+      background-color: gold;
+      overflow: hidden;
+      box-sizing: border-box;
+
+      display: grid;
+      grid-template-rows: 25px 25px auto;
+    }
+    div:has(>form) {
+      overflow: auto;
+      box-sizing: border-box;
+    }
+
+    ul {
+      text-align: center;
+      list-style: none;
+      padding-inline-start: 0;
+    }
+    #word {
+      display: inline-block;
+      margin-right: 5px;
+      width: 120px;
+      border-radius: 5px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .Word {
+      background-color: palevioletred;
+      border-right: 1px black solid;
+      box-sizing: border-box;
+      overflow: auto;
+
+      display: grid;
+      grid-template-rows: 25px auto;
+    }
+    #Word-h3 {
+      border-bottom: 1px solid black;
+      margin-bottom: 0px;
+      padding-bottom: 30px;
+    }
+    #W_main {
+      padding: 30px;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+    .Vocabulary {
+      text-align: center;
+      border-right: 1px black solid;
+      background-color: orange;
+      box-sizing: border-box;
+      overflow: auto;
+
+      display: grid;
+      grid-template-rows: 25px auto;
+    }
+    #V_main {
+      padding: 20px;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+    .History {
+      text-align: center;
+      background-color: orange;
+      box-sizing: border-box;
+      overflow: auto;
+
+      display: grid;
+      grid-template-rows: 25px auto;
+    }
+    #H_main {
+      padding: 20px;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="aa">
+    <div class="aside">
+      <h3>OALD Se7en</h3>
+      <div>
+        <input type="text" id="word">
+        <button>搜索</button>
+      </div>
+      <div>
+        <form action="" name="aside">
+          <ul>
+            <li><a href="">word1</a></li>
+            <li><a href="">word2</a></li>
+            <li><a href="">word3</a></li>
+            <li><a href="">word4</a></li>
+            <li><a href="">word5</a></li>
+            <li><a href="">word6</a></li>
+            <li><a href="">word7</a></li>
+            <li><a href="">word8</a></li>
+            <li><a href="">word9</a></li>
+            <li><a href="">word10</a></li>
+            <li><a href="">word11</a></li>
+            <li><a href="">word12</a></li>
+            <li><a href="">word13</a></li>
+            <li><a href="">word14</a></li>
+            <li><a href="">word15</a></li>
+            <li><a href="">word16</a></li>
+            <li><a href="">word17</a></li>
+            <li><a href="">word18</a></li>
+            <li><a href="">word19</a></li>
+            <li><a href="">word20</a></li>
+            <li><a href="">word21</a></li>
+            <li><a href="">word22</a></li>
+            <li><a href="">word23</a></li>
+            <li><a href="">word24</a></li>
+            <li><a href="">word25</a></li>
+            <li><a href="">word26</a></li>
+            <li><a href="">word27</a></li>
+            <li><a href="">word28</a></li>
+            <li><a href="">word29</a></li>
+            <li><a href="">word30</a></li>
+            <li><a href="">word31</a></li>
+            <li><a href="">word32</a></li>
+            <li><a href="">word33</a></li>
+            <li><a href="">word34</a></li>
+            <li><a href="">word35</a></li>
+            <li><a href="">word36</a></li>
+            <li><a href="">word37</a></li>
+            <li><a href="">word38</a></li>
+            <li><a href="">word39</a></li>
+            <li><a href="">word40</a></li>
+            <li><a href="">word41</a></li>
+            <li><a href="">word42</a></li>
+            <li><a href="">word43</a></li>
+            <li><a href="">word44</a></li>
+            <li><a href="">word45</a></li>
+            <li><a href="">word46</a></li>
+            <li><a href="">word47</a></li>
+            <li><a href="">word48</a></li>
+            <li><a href="">word49</a></li>
+            <li><a href="">word50</a></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <div class="Word">
+      <h3 id="Word-h3">fantasy</h3>
+      <div id="W_main">
+        <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+            <li>1.If you are passionate about something, pursue it, no matter what anyone else thinks. That's how dreams are achieved.A man is not old until his regrets take place of his dreams.</li>
+      </div>
+    </div>
+
+    <div class="Vocabulary">
+      <h3>Vocabulary</h3>
+      <div id="V_main">
+       
+      </div>
+    </div>
+    <div class="History">
+      <h3>History</h3>
+      <div id="H_main">
+        
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
