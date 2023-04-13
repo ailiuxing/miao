@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    background-color: #0001;
+    box-shadow: inset 0 0 1px red;
+  }
+  html {
+    zoom: 2;
+  }
+  dl {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+  }
+  dd {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  dt {
+    grid-column-start: 1;
+    grid-row-end: span 9999;
+  }
+</style>
+<body>
+  <dl>
+    <dt>导演</dt>
+    <dd>张三</dd>
+    <dd>李四</dd>
+    <dd>王二麻子</dd>
+    <dd>小二子</dd>
+    <dt>导演</dt>
+    <dd>张三</dd>
+    <dd>李四</dd>
+    <dd>王二麻子</dd>
+    <dd>小二子</dd>
+    <dt>导演</dt>
+    <dd>张三</dd>
+    <dd>李四</dd>
+    <dd>王二麻子</dd>
+    <dd>小二子</dd>
+  </dl>
+</body>
+</html>
