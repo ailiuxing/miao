@@ -1,0 +1,157 @@
+<script id="ch0103/01" type="1">
+  var a = +prompt('a',1)
+  var b = +prompt('b',2)
+  var c = a + b
+  console.log(c)
+</script>
+
+<script id="ch0103/02" type="2">
+  var a = +prompt('a',2)
+  var b = +prompt('b',3)
+  var c = +prompt('c',5)
+  var d = ( a + b ) * c
+  console.log(d)
+</script>
+
+<script id="ch0103/03" type="3">
+  var a = +prompt('a',1)
+  var b = +prompt('b',1)
+  var c = +prompt('c',3)
+  var d = ( a + b ) / c
+  console.log(d)
+</script>
+
+<script id="ch0103/04" type="4">
+  var a = +prompt('请输入a',10)
+  var b = +prompt('请输入b',3)
+  var c = a/b
+  console.log(c)
+</script>
+
+<script id="ch0103/05" type="5">
+  var a = +prompt('a',5)
+  var b = +prompt('b',7)
+  var c =a/b
+  console.log(c.toFixed(9))
+</script>
+
+<script id="ch0103/06" type="6">
+  var a = +prompt('a',10433)
+  var b = +prompt('b',60 )
+  var c =(b/a*100)
+  console.log(c.toFixed(3)+'%')
+</script>
+
+<script id="ch0103/07" type="7">
+  var x = +prompt('x',2.31)
+  var a = +prompt('a',1.2)
+  var b = +prompt('b',2)
+  var c = +prompt('c',2)
+  var d = +prompt('d',3)
+  var e = ( a * x ** 3+b * x ** 2+c * x+d )
+  console.log(e.toFixed(7))
+</script>
+
+<script id="ch0103/08" type="8">
+  var f = +prompt('f',41)
+  var c = 5 * ( f - 32 ) / 9
+  console.log(c.toFixed(5)) 
+</script>
+
+<script id="ch0103/09" type="9">
+  var r = +prompt('r',3.0)
+  var a = ( 2 * r ).toFixed(4)
+  var b = ( 2 * 3.14159 * r ).toFixed(4)
+  var c = ( 3.14159 * r * r ).toFixed(4)
+  console.log(a,b,c)
+</script>
+
+<script id="ch0103/10" type="10">
+  var r1 = +prompt('r1',1)
+  var r2 = +prompt('r2',2)
+  var r = 1/(1/r1 + 1/r2)
+  console.log(r.toFixed(2))
+</script>
+
+<script id="ch0103/11" type="11">
+  var a = +prompt('a',73.263)
+  var b = +prompt('b',0.9973)
+  var c =a%b
+  console.log(c.toFixed(4))
+</script>
+
+<script id="ch0103/12" type="12">
+  var r = +prompt('r',4)
+  var v = 4/3*3.14*r**3
+  console.log(v.toFixed(2))
+</script>
+
+<script id="ch0103/13" type="13">
+  var n = +prompt('n',100)
+  var a = n % 10
+  var b = (n % 100 - n % 10)/10
+  var c = (n %1000 - n % 100)/100
+  var d = a+''+b+''+c
+  console.log(d)
+</script>
+
+<script id="ch0103/14" type="14">
+  var h = +prompt('h',23)
+  var r = +prompt('r',11)
+  var d =Math.ceil(20/(3.14159*r**2*h/1000))
+  console.log(d)
+</script>
+
+<script id="ch0103/15" type="15">
+  var n = +prompt('n',10)
+  var x = +prompt('x',4)
+  var y = +prompt('y',9)
+  var p =n - Math.ceil (y/x)
+  console.log(p) 
+</script>
+
+<script id="ch0103/16" type="16">
+  var xa = +prompt('xa',1)
+  var xb = +prompt('xb',2)
+  var ya = +prompt('ya',1)
+  var yb = +prompt('yb',2)
+  var z = Math.sqrt((xa - xb) ** 2 + (ya - yb) ** 2)
+    console.log(z.toFixed(3))
+</script>
+
+<script id="ch0103/17" type="">
+  var x1 = +prompt("x1",0)
+  var y1 = +prompt("y1",0)
+  var x2 = +prompt("x2",4)
+  var y2 = +prompt("y2",0)
+  var x3 = +prompt("x3",0)
+  var y3 = +prompt("y3",3)
+  var a = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+  var b = Math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2)
+  var c = Math.sqrt((x3 - x2) ** 2 + (y3 - y2) ** 2)
+  var d = (a + b + c) / 2
+  var e = Math.sqrt(d * (d - a) * (d - b) * (d - c))
+  console.log(e.toFixed(2))
+</script>
+
+<script id="ch0103/18" type="18">
+  var a1 = +prompt('a1',1)
+  var a2 = +prompt('a2',4)
+  var n = +prompt('n',100)
+  var c = (a1 + (n - 1) * (a2 - a1)) * 1
+  console.log(c)
+</script>
+
+<script id="ch0103/19" type="19">
+  var a = +prompt('a',3)
+  var b = +prompt('b',4)
+  var c = a*b
+  console.log(c)
+</script>
+
+<script id="ch0103/20" type="20">
+  var n = +prompt('n',3)
+  var a =2**n
+  console.log(a)
+</script>
+
