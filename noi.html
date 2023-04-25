@@ -13,11 +13,11 @@
   console.log(d)
 </script>
 
-<script id="ch0103/03" type="3">
+<script id="ch0103/03" type="">
   var a = +prompt('a',1)
   var b = +prompt('b',1)
   var c = +prompt('c',3)
-  var d = ( a + b ) / c
+  var d = Math.ceil(( a + b ) / c)
   console.log(d)
 </script>
 
@@ -25,7 +25,8 @@
   var a = +prompt('请输入a',10)
   var b = +prompt('请输入b',3)
   var c = a/b
-  console.log(c)
+  var d = a%b
+  console.log(c,d)
 </script>
 
 <script id="ch0103/05" type="5">
@@ -112,14 +113,14 @@
 
 <script id="ch0103/16" type="16">
   var xa = +prompt('xa',1)
-  var xb = +prompt('xb',2)
   var ya = +prompt('ya',1)
+  var xb = +prompt('xb',2)
   var yb = +prompt('yb',2)
   var z = Math.sqrt((xa - xb) ** 2 + (ya - yb) ** 2)
     console.log(z.toFixed(3))
 </script>
 
-<script id="ch0103/17" type="">
+<script id="ch0103/17" type="17">
   var x1 = +prompt("x1",0)
   var y1 = +prompt("y1",0)
   var x2 = +prompt("x2",4)
