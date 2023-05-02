@@ -13,19 +13,19 @@
   console.log(d)
 </script>
 
-<script id="ch0103/03" type="3">
+<script id="ch0103/03" type="03">
   var a = +prompt('a',1)
   var b = +prompt('b',1)
   var c = +prompt('c',3)
-  var d = Math.ceil(( a + b ) / c)
+  var d = Math.trunc(( a + b ) / c)
   console.log(d)
 </script>
 
-<script id="ch0103/04" type="4">
+<script id="ch0103/04" type="04">
   var a = +prompt('请输入a',10)
   var b = +prompt('请输入b',3)
-  var c = a/b
-  var d = a%b
+  var c = Math.trunc(a / b)
+  var d = a % b
   console.log(c,d)
 </script>
 
@@ -512,14 +512,12 @@
 <script id="ch0105/04" type="04">
   var n = +prompt()
   var sum = 0
-  var count = 0
-  while (count < n) {
-    var num = +prompt()
-    sun = sum + num
-    count = count + 1
+  for (i = 0; i < n; i++) {
+    var a = +prompt()
+    sum = sum + a
 }
-var average = sum / n
-console.log(sun, average.toFixed(5))
+var c = sum / n
+console.log(sum, c.toFixed(5))
 </script>
 
 
@@ -560,18 +558,16 @@ console.log(sun, average.toFixed(5))
 
 <script id="ch0105/07" type="07">
   var n = +prompt()
-  var c = 0
   var aa = 0
   var bb = 0
   var cc = 0
-  while (c < n) {
+  for (c = 0; c < n; c++) {
     var dd = +prompt()
     var ee = +prompt()
     var ff = +prompt()
     aa = aa + dd
     bb = bb + ee
-    cc = cc = ff
-    c = c + 1
+    cc = cc + ff
   }
   var gg = aa + bb + cc
   console.log(aa, bb, cc, gg)
