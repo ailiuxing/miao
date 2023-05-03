@@ -1182,3 +1182,20 @@ console.log(sum, c.toFixed(5))
   }
   console.log(sum)
 </script>
+
+
+<script id="narcissistic" type="">
+  var n = +prompt()
+  var x = n
+  var sum = 0
+  do {
+    var a = x % 10
+    var x = (x - a) / 10
+    sum += a ** 3
+  } while (x > 0)
+  if (sum == n) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
