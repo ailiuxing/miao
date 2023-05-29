@@ -122,9 +122,3 @@ class LinkedList {
     return l
   }
 }
-
-
-// Queue
-class Queue {
-  constructor()
-}
