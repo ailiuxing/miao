@@ -122,3 +122,84 @@ class LinkedList {
     return l
   }
 }
+
+
+// Queue
+class Queue {
+
+  constructor() {
+    this.head = null
+    this.tail = null
+    this.count = 0
+  }
+
+  add(val) {
+    let node = {
+      val: val,
+      next: null
+    }
+    if (!this.head) {
+      this.head = this.tail = node
+    }
+    this.tail.next = node
+    this.tail = node
+    this.count++
+  }
+
+  pop(val) {
+    if (!this.head) {
+      return
+    }
+
+    if (this.head.next === this.tail) {
+      let p = this.head.val
+      this.head = this.tail = null
+      return p
+    }
+
+    let p = this.head.val
+    this.head = this.head.next
+    return p
+  }
+
+  get size() {
+    return this.count
+  }
+}
+
+
+// Stack
+class Stack {
+
+  constructor() {
+    this.head = null
+    this.count = 0
+  }
+
+  add(val) {
+    let node = {
+      val: val,
+      next: null
+    }
+    if (!this.head) {
+      this.head = node
+    } else {
+      node.next = this.head
+      this.head = node
+    }
+    this.count++
+  }
+
+  pop(val) {
+    if (!this.head) return undefined
+
+    this.count++
+    let p = this.head.val
+    this.head = this.head.next
+    return p
+  }
+
+  get size() {
+    return this.count
+  }
+}
