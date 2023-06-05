@@ -54,7 +54,7 @@ var ailiuxing = {
         result.push(array[i]);
       }
     }
-    return result;
-    flatten(array)
+    return result
   },
+
 }
