@@ -10,18 +10,18 @@ var ailiuxing = {
 
 
 var ailiuxing = {
-  function compact(array) {
+  compact: function (array) {
     var index = -1,
-    length = array == null ? 0 : array.length,
-    resIndex = 0,
-    result = [];
+      length = array == null ? 0 : array.length,
+      resIndex = 0,
+      result = [];
 
-while (++index < length) {
-  var value = array[index];
-  if (value) {
-    result[resIndex++] = value;
+    while (++index < length) {
+      var value = array[index];
+      if (value) {
+        result[resIndex++] = value;
+      }
+    }
+    return result;
   }
-}
-return result;
-  }  
 }
