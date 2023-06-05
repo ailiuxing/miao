@@ -55,6 +55,6 @@ var ailiuxing = {
       }
     }
     return result;
-  }
-flatten(array)
+    flatten(array)
+  },
 }
