@@ -6,12 +6,7 @@ var ailiuxing = {
       result.push(ary.slice(i, i + size))
     }
     return result
-  }
-}
-
-
-// compact
-var ailiuxing = {
+  },
   compact: function (array) {
     let res = []
     for (let i = 0; i < array.length; i++) {
