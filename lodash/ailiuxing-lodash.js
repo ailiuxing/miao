@@ -1,4 +1,4 @@
-// chunk
+
 var ailiuxing = {
   chunk: function (ary, size) {
     var result = []
@@ -7,6 +7,8 @@ var ailiuxing = {
     }
     return result
   },
+
+
   compact: function (array) {
     let res = []
     for (let i = 0; i < array.length; i++) {
@@ -15,5 +17,36 @@ var ailiuxing = {
       }
     }
     return res
+  },
+
+
+  fill: function (array, value, start = 0, end = array.length) {
+    for (let i = start; i < end; i++) {
+      array[i] = value
+    }
+    return array
+  },
+
+
+  drop: function (array, n) {
+    if (n == null) {
+      n = 1
+    }
+    if (n == 0) {
+      return array
+    }
+    return array.splice(n)
+  },
+
+
+  difference: function (array, value, fromIndex) {
+    let index = fromIndex - 1
+    const { length } = array
+    while (++index < length) {
+      if (array[index] === value) {
+        return index
+      }
+    }
+    return -1
   }
 }
