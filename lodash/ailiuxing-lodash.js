@@ -39,14 +39,22 @@ var ailiuxing = {
   },
 
 
-  difference: function (array, value, fromIndex) {
-    let index = fromIndex - 1
-    const { length } = array
-    while (++index < length) {
-      if (array[index] === value) {
-        return index
+  difference: function (array, values) {
+    const set = new Set(values);
+    return array.filter(item => !set.has(item));
+  },
+
+
+  flatten: function (array) {
+    var result = [];
+    for (var i = 0, len = array.length; i < len; i++) {
+      if (Array.isArray(array[i])) {
+        result = result.concat(flatten(array[i]));
+      } else {
+        result.push(array[i]);
       }
     }
-    return -1
+    return result;
   }
+flatten(array)
 }
