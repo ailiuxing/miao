@@ -1,21 +1,9 @@
 var user_ailiuxing = {
-  chunk: function (ary, size) {
-    // #1  
-    size = Math.max(size, 0)
-    const length = array == null ? 0 : array.length
-    if (!length || size < 1) {
-      return []
+  function(array, size = 1) {
+    let res = []
+    for (let i = 0; i < array.length; i += size) {
+      res.push(array.slice(i, i + size))
     }
-
-    // #2
-    let index = 0
-    let resIndex = 0
-    const result = new Array(Math.ceil(length / size))
-
-    // #3  
-    while (index < length) {
-      result[resIndex++] = slice(array, index, (index += size))
-    }
-    return result
+    return res
   }
 }
