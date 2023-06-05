@@ -1,17 +1,20 @@
-function(ary, size) {
-  var result = [
-    []
-  ]
-  var count = 0
-  var j = 0
-  for (let index = 0; index < ary.length; index++) {
-    count++
-    result[j].push(ary[index])
-    if (count == size && index != ary.length - 1) {
-      count = 0
-      j++
-      result[j] = []
-    }
+
+function chunk(array, size) {
+  // #1  
+  size = Math.max(size, 0)
+  const length = array == null ? 0 : array.length
+  if (!length || size < 1) {
+    return []
+  }
+
+  // #2
+  let index = 0
+  let resIndex = 0
+  const result = new Array(Math.ceil(length / size))
+
+  // #3  
+  while (index < length) {
+    result[resIndex++] = slice(array, index, (index += size))
   }
   return result
 }
