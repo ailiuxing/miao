@@ -39,7 +39,7 @@ var ailiuxing = {
   },
 
 
-  difference: function (array, ...values) {
+  difference: function (array, values) {
     let val = this.flattenDeep(values)
     let res = []
     let map = []
@@ -77,5 +77,28 @@ var ailiuxing = {
       res[key] = pairs[i][1]
     }
     return res
+  },
+
+
+  head: function (array) {
+    var arr = array[0]
+    return arr
+  },
+
+
+  indexOf: function (array, value, fromIndex = 0) {
+    if (fromIndex == -1) {
+      for (var i = array.length - 1; i >= 0; i--) {
+        if (array[i] == value) {
+          return i;
+        }
+      }
+    } else {
+      for (var i = fromIndex; i < array.length; i++) {
+        if (array[i] == value) {
+          return i;
+        }
+      }
+    }
   }
 }
