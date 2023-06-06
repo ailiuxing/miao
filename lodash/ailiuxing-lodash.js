@@ -39,21 +39,43 @@ var ailiuxing = {
   },
 
 
-  difference: function (array, values) {
-    const set = new Set(values);
-    return array.filter(item => !set.has(item));
+  difference: function (array, ...values) {
+    let val = this.flattenDeep(values)
+    let res = []
+    let map = []
+    for (let num of val) {
+      if (!map[num]) {
+        map[num] = true
+      }
+    }
+    for (let i of array) {
+      if (!(i in map)) {
+        res.push(i)
+      }
+    }
+    return res
   },
 
 
   flatten: function (array) {
-    var result = [];
-    for (var i = 0, len = array.length; i < len; i++) {
-      if (Array.isArray(array[i])) {
-        result = result.concat(flatten(array[i]));
-      } else {
-        result.push(array[i]);
-      }
+    return array.flat()
+  },
+
+
+  flattenDepth: function (ary, n) {
+    for (i = 0; i < n; i++) {
+      ary = ary.flat()
     }
-    return result
+    return ary
+  },
+
+
+  fromPairs: function (pairs) {
+    let res = {}
+    for (let i = 0; i < pairs.length; i++) {
+      let key = pairs[i][0]
+      res[key] = pairs[i][1]
+    }
+    return res
   }
 }
