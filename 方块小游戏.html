@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小人逃脱</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #game {
+      width: 100vw;
+      height: 100vh;
+      background-color: #222;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #player {
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .obstacle {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 24px;
+    }
+
+    #message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 48px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="game">
+    <div id="player"></div>
+    <div id="score">分数: 0</div>
+    <div id="message"></div>
+  </div>
+
+</body>
+<script>
+  // 获取DOM元素
+  const game = document.getElementById('game');
+  const player = document.getElementById('player');
+  const score = document.getElementById('score');
+  const message = document.getElementById('message');
+
+  // 初始化游戏参数
+  let scoreValue = 0; // 得分
+  let isGameOver = false; // 游戏是否结束
+  let obstacleInterval; // 障碍物下落间隔
+  let gameTimer; // 游戏计时器
+  const obstacleSpeed = 5; // 障碍物下落速度
+  const obstacleWidth = 50; // 障碍物宽度
+  const obstacleHeight = 50; // 障碍物高度
+  const playerSpeed = 10; // 玩家移动速度
+
+  // 监听键盘事件，控制玩家左右移动
+  document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') {
+      player.style.left = Math.max(0, player.offsetLeft - playerSpeed) + 'px';
+    } else if (event.key === 'ArrowRight') {
+      player.style.left = Math.min(game.clientWidth - player.offsetWidth, player.offsetLeft + playerSpeed) + 'px';
+    }
+  });
+
+  // 检测碰撞
+  function detectCollision() {
+    // 玩家和每个障碍物都进行碰撞检测
+    const obstacles = document.querySelectorAll('.obstacle');
+    obstacles.forEach(obstacle => {
+      if (isCollided(player, obstacle)) {
+        endGame();
+      }
+    });
+  }
+
+  // 碰撞检测函数
+  function isCollided(element1, element2) {
+    const rect1 = element1.getBoundingClientRect();
+    const rect2 = element2.getBoundingClientRect();
+    return !(rect1.bottom < rect2.top || rect1.top > rect2.bottom || rect1.right < rect2.left || rect1.left > rect2.right);
+  }
+
+  // 障碍物下落
+  function dropObstacle() {
+    // 创建障碍物
+    const obstacle = document.createElement('div');
+    obstacle.classList.add('obstacle');
+    obstacle.style.width = obstacleWidth + 'px';
+    obstacle.style.height = obstacleHeight + 'px';
+    obstacle.style.top = -obstacleHeight + 'px';
+    obstacle.style.left = Math.floor(Math.random() * (game.clientWidth - obstacleWidth)) + 'px';
+    game.appendChild(obstacle);
+
+    // 障碍物下落动画
+    const obstacleDrop = setInterval(() => {
+      if (!isGameOver) {
+        obstacle.style.top = obstacle.offsetTop + obstacleSpeed + 'px';
+        if (obstacle.offsetTop >= game.clientHeight) {
+          game.removeChild(obstacle);
+          clearInterval(obstacleDrop);
+          scoreValue++;
+          score.innerHTML = 'Score: ' + scoreValue;
+        }
+        detectCollision();
+      }
+    }, 10);
+  }
+
+  // 开始游戏
+  function startGame() {
+    scoreValue = 0;
+    isGameOver = false;
+    obstacleInterval = setInterval(dropObstacle, 1000);
+    gameTimer = setTimeout(() => {
+      endGame();
+    }, 60000);
+  }
+
+  // 结束游戏
+  function endGame() {
+    isGameOver = true;
+    clearInterval(obstacleInterval);
+    clearTimeout(gameTimer);
+    message.innerHTML = 'Game Over! Your score is ' + scoreValue;
+    message.style.display = 'block';
+  }
+
+  // 监听重新开始按钮
+  message.addEventListener('click', () => {
+    message.style.display
+    'none';
+    while (game.firstChild) {
+      game.removeChild(game.firstChild);
+    }
+    startGame();
+  });
+
+  // 开始游戏
+  startGame();
+</script>
+
+</html>
